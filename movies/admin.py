@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.contrib.gis import forms
+from django import forms
 from django.utils.safestring import mark_safe
 
 from .models import Category, Genre, Movie, MovieShot, Actor, Rating, RatingStar, Reviews
@@ -133,7 +133,7 @@ class ActorAdmin(admin.ModelAdmin):
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
     """Рейтинг"""
-    list_display = ('name', 'ip')
+    list_display = ('star', 'ip')
 
 
 @admin.register(MovieShot)
