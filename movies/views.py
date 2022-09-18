@@ -12,6 +12,9 @@ class MoviesView(ListView):
     model = Movie
     queryset = Movie.objects.filter(draft=False)
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        pass
+    
 
 class MovieDetailView(DetailView):
     """Полное описание фильма"""
