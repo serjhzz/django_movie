@@ -145,7 +145,7 @@ class MovieShotAdmin(admin.ModelAdmin):
     def get_image(self, obj):
         return mark_safe(f'<img src={obj.url} width="50" height="60"')
 
-    get_image.short_description = 'Изображение'
+    get_image.short_description = 'Pict'
 
 
 admin.site.register(RatingStar)
